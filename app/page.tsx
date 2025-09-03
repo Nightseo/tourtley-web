@@ -5,6 +5,20 @@ import { useState, useEffect } from 'react'
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isPrinting, setIsPrinting] = useState(false)
+  const [moneyPrinted, setMoneyPrinted] = useState(52000)
+  const [dollarBills, setDollarBills] = useState<{ id: number; x: number }[]>([])
+
+  useEffect(() => {
+    // Load saved money amount from localStorage
+    const saved = localStorage.getItem('tourtley_money_printed')
+    if (saved) {
+      setMoneyPrinted(parseInt(saved))
+    } else {
+      // First time visitor starts with 52000
+      localStorage.setItem('tourtley_money_printed', '52000')
+    }
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +27,39 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  useEffect(() => {
+    // Save money printed to localStorage whenever it changes
+    if (moneyPrinted > 0) {
+      localStorage.setItem('tourtley_money_printed', moneyPrinted.toString())
+    }
+  }, [moneyPrinted])
+
+  const printMoney = () => {
+    if (isPrinting) return
+    
+    setIsPrinting(true)
+    const newBillCount = 10
+    const newBills = []
+    
+    for (let i = 0; i < newBillCount; i++) {
+      setTimeout(() => {
+        const randomX = (Math.random() - 0.5) * 200
+        const billId = Date.now() + i
+        
+        setDollarBills(prev => [...prev, { id: billId, x: randomX }])
+        setMoneyPrinted(prev => prev + 100)
+        
+        setTimeout(() => {
+          setDollarBills(prev => prev.filter(bill => bill.id !== billId))
+        }, 2000)
+      }, i * 100)
+    }
+    
+    setTimeout(() => {
+      setIsPrinting(false)
+    }, newBillCount * 100)
+  }
 
   return (
     <main className="min-h-screen">
@@ -93,6 +140,44 @@ export default function Home() {
               <p className="text-lg text-white/90 mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 Community-driven token with strong fundamentals and organic growth
               </p>
+              
+              {/* Money Printer Section */}
+              <div className="mb-8">
+                <div className="money-printer">
+                  <button
+                    onClick={printMoney}
+                    disabled={isPrinting}
+                    className={`bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg ${
+                      isPrinting ? 'printer-active' : ''
+                    } ${isPrinting ? 'cursor-not-allowed opacity-90' : 'cursor-pointer'}`}
+                  >
+                    {isPrinting ? '🖨️ PRINTING...' : '💵 PRINT MONEY'}
+                  </button>
+                  
+                  {/* Flying dollar bills */}
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                    {dollarBills.map(bill => (
+                      <div
+                        key={bill.id}
+                        className="money-bill"
+                        style={{ '--random-x': `${bill.x}px` } as any}
+                      >
+                        $
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="mt-4">
+                  <div className="text-2xl font-bold text-green-400">
+                    ${moneyPrinted.toLocaleString()} PRINTED
+                  </div>
+                  <div className="text-sm text-green-300/70 mt-1">
+                    Total by TOURTLEY Community
+                  </div>
+                </div>
+              </div>
+              
               <div className="flex gap-4 justify-center lg:justify-start">
                 <a
                   href="#"
