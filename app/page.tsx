@@ -88,10 +88,10 @@ export default function Home() {
                 TOURTLEY
               </h1>
               <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                The Most Epic Turtle Meme Coin on Solana 🐢
+                The Turtle Meme Coin on Solana
               </p>
               <p className="text-lg text-white/90 mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                Join the shell-shocking revolution of slow and steady gains
+                Community-driven token with strong fundamentals and organic growth
               </p>
               <div className="flex gap-4 justify-center lg:justify-start">
                 <a
@@ -160,25 +160,25 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all hover:transform hover:scale-105">
               <div className="text-5xl mb-6">🚀</div>
-              <h3 className="text-2xl font-bold text-white mb-4">To The Moon</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Strong Growth</h3>
               <p className="text-white/80 leading-relaxed">
-                Slow and steady wins the race. TOURTLEY is building momentum for the ultimate moonshot
+                Consistent upward momentum backed by an active and growing community
               </p>
             </div>
             
             <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all hover:transform hover:scale-105">
               <div className="text-5xl mb-6">💎</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Diamond Shell</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Proven Resilience</h3>
               <p className="text-white/80 leading-relaxed">
-                Built tough like a turtle shell. HODL strong through any market conditions
+                Strong holder base with low sell pressure and high conviction
               </p>
             </div>
             
             <div className="bg-gradient-to-br from-pink-500/10 to-blue-500/10 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all hover:transform hover:scale-105">
               <div className="text-5xl mb-6">🌊</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Ocean of Gains</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Liquidity Locked</h3>
               <p className="text-white/80 leading-relaxed">
-                Dive deep into profits with the most chill community in the Solana ecosystem
+                100% liquidity locked ensuring long-term stability and investor confidence
               </p>
             </div>
           </div>
@@ -253,7 +253,7 @@ export default function Home() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2">Launch Phase</h3>
-                  <p className="text-white/70">Token launch, liquidity lock, community building, first marketing push</p>
+                  <p className="text-white/70">Token launch, liquidity locked, CoinGecko & CMC listings</p>
                 </div>
               </div>
               
@@ -263,7 +263,7 @@ export default function Home() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2">Growth Phase</h3>
-                  <p className="text-white/70">Major CEX listings, influencer partnerships, 25K holders target</p>
+                  <p className="text-white/70">Major CEX listings, strategic partnerships, 50K holders milestone</p>
                 </div>
               </div>
               
@@ -273,7 +273,7 @@ export default function Home() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2">Expansion Phase</h3>
-                  <p className="text-white/70">NFT collection drop, staking platform, cross-chain bridge</p>
+                  <p className="text-white/70">NFT collection launch, staking rewards, ecosystem expansion</p>
                 </div>
               </div>
               
@@ -283,7 +283,7 @@ export default function Home() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2">Domination Phase</h3>
-                  <p className="text-white/70">Top 100 coin status, major partnerships, TOURTLEY ecosystem launch</p>
+                  <p className="text-white/70">DeFi integrations, institutional partnerships, global adoption</p>
                 </div>
               </div>
             </div>
@@ -295,10 +295,10 @@ export default function Home() {
       <section id="community" className="py-24 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            Join the Turtle Army! 🐢
+            Join Our Community
           </h2>
           <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto">
-            Don't miss the slowest rug to riches story. Join our community and ride the wave to generational wealth.
+            Be part of a growing ecosystem. Connect with thousands of holders and stay updated on the latest developments.
           </p>
           
           <div className="flex gap-6 justify-center flex-wrap">
