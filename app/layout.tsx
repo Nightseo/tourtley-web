@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'TOURTLEY - Crypto Meme para Niños',
+  title: 'TURTLEY - Crypto Meme para Niños',
   description: 'El proyecto crypto meme más divertido para niños',
 }
 

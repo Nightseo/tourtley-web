@@ -11,12 +11,12 @@ export default function Home() {
 
   useEffect(() => {
     // Load saved money amount from localStorage
-    const saved = localStorage.getItem('tourtley_money_printed')
+    const saved = localStorage.getItem('turtley_money_printed')
     if (saved) {
       setMoneyPrinted(parseInt(saved))
     } else {
       // First time visitor starts with 52000
-      localStorage.setItem('tourtley_money_printed', '52000')
+      localStorage.setItem('turtley_money_printed', '52000')
     }
   }, [])
 
@@ -31,7 +31,7 @@ export default function Home() {
   useEffect(() => {
     // Save money printed to localStorage whenever it changes
     if (moneyPrinted > 0) {
-      localStorage.setItem('tourtley_money_printed', moneyPrinted.toString())
+      localStorage.setItem('turtley_money_printed', moneyPrinted.toString())
     }
   }, [moneyPrinted])
 
@@ -70,7 +70,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-white">TOURTLEY</span>
+              <span className="text-2xl font-bold text-white">TURTLEY</span>
             </div>
             
             <div className="hidden md:flex items-center gap-8">
@@ -132,7 +132,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             <div className="text-center lg:text-left flex-1 animate-slideInLeft">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">
-                TOURTLEY
+                TURTLEY
               </h1>
               <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 The Turtle Meme Coin on Solana
@@ -173,7 +173,7 @@ export default function Home() {
                     ${moneyPrinted.toLocaleString()} PRINTED
                   </div>
                   <div className="text-sm text-green-300/70 mt-1">
-                    Total by TOURTLEY Community
+                    Total by TURTLEY Community
                   </div>
                 </div>
               </div>
@@ -239,7 +239,7 @@ export default function Home() {
       <section id="about" className="py-24 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
-            Why TOURTLEY?
+            Why TURTLEY?
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -430,7 +430,7 @@ export default function Home() {
       <footer className="py-8 bg-black border-t border-white/10">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white/60">
-            © 2024 TOURTLEY. All rights reserved. | Contract: 0x0000...0000
+            © 2025 TURTLEY. All rights reserved. | Contract: 0x0000...0000
           </p>
         </div>
       </footer>
